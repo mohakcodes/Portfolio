@@ -2,20 +2,25 @@
 const currentPath = Astro.url.pathname;
 ---
 
-<nav class="flex justify-between py-3 px-4 bg-slate-200 fixed w-full top-0">
-    <p class="text-2xl font-bold"><a href="/">@mohakcodes</a></p>
-    <ul class="flex gap-3 sm:gap-4 items-center font-semibold sm:text-xl text-lg">
-        <li class={currentPath === '/' ? 'font-bold underline' : 'hover:underline'}>
-            <a href="/">Home</a>
-        </li>
-        <li class={currentPath === '/about' ? 'font-bold underline' : 'hover:underline'}>
-            <a href="/about">About</a>
-        </li>
-        <li class={currentPath === '/projects' ? 'font-bold underline' : 'hover:underline'}>
-            <a href="/projects">Projects</a>
-        </li>
-        <li class={currentPath === '/connect' ? 'font-bold underline' : 'hover:underline'}>
-            <a href="/connect">Connect</a>
-        </li>
-    </ul>
+<nav class="flex flex-col sm:flex-row justify-center items-center sm:justify-between py-3 px-4 bg-slate-200 fixed w-full top-0 z-10">
+    <div>
+        <p class="sm:text-2xl text-xl font-bold"><a href="/">@mohakcodes</a></p>
+    </div>
+    <hr class="sm:hidden w-[60%] border-t-2 my-1 border-gray-800">
+    <div class="sm:mt-[2px]">
+        <ul class="flex gap-3 sm:gap-4 items-center font-semibold sm:text-xl text-lg">
+            <li class={currentPath === '/' ? 'font-bold underline' : 'hover:underline'}>
+                <a href="/">Home</a>
+            </li>
+            <li class={currentPath === '/about' ? 'font-bold underline' : 'hover:underline'}>
+                <a href="/about">About</a>
+            </li>
+            <li class={currentPath === '/projects' ? 'font-bold underline' : 'hover:underline'}>
+                <a href="/projects">Projects</a>
+            </li>
+            <li class={currentPath === '/connect' ? 'font-bold underline' : 'hover:underline'}>
+                <a href="/connect">Connect</a>
+            </li>
+        </ul>
+    </div>
 </nav>
