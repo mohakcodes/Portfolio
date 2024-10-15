@@ -1,5 +1,33 @@
 ---
+import ProjectCard from "../components/ProjectCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const projects = [
+  {
+    title:'TimeCraft',
+    imageSrc:'../src/assets/timecraft.png',
+    year:'March 2024',
+    description:'A smart scheduling app that automates event planning and auto-embeds Google Meet links in Calendar for effortless meeting coordination.',
+    tags:['Next.js', 'TailwindCSS', 'OAuth2.0','Google Calendar API'],
+    link:'https://github.com/mohakcodes/TimeCraft'
+  },
+  {
+    title:'AlgoGraph',
+    imageSrc:'../src/assets/algograph.png',
+    year:'July 2023',
+    description:'A graph algorithm visualization tool built with ReactJS for real-time visualization of pathfinding algorithms like Dijkstra’s, DFS, and BFS.',
+    tags:['React.js', 'Javascript', 'CSS', 'Graph Algorithms'],
+    link:'https://github.com/mohakcodes/TimeCraft'
+  },
+  {
+    title:'Grudu List',
+    imageSrc:'../src/assets/grudulist.png',
+    year:'September 2024',
+    description:'A productivity-focused group and task management app that enables group owners to add members as viewers or editors, built with Next.js, TypeScript, and Ruby on Rails API.',
+    tags:['Next.js', 'TailwindCSS', 'Ruby on Rails'],
+    link:'https://github.com/mohakcodes/TimeCraft'
+  }
+]
 ---
 
 <BaseLayout>
@@ -15,6 +43,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </span>    
                 problem-solving and creating user-focused web applications.
             </p>
+            <div>
+              {
+                projects.map((project)=>{
+                  return <ProjectCard {...project} />
+                })
+              }
+            </div>
         </div>
     </div>
 </BaseLayout>
