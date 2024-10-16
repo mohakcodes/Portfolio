@@ -33,21 +33,23 @@ const projects = [
 <BaseLayout>
     <div class="flex flex-col justify-center items-center min-h-screen bg-gradient-to-r from-slate-300 via-slate-200 to-slate-300 p-8">
         <div class="container text-center mt-10 italic animate-fade-in">
-            <h1 class="inline-block p-4 text-4xl sm:text-5xl pt-2 font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 via-emerald-500 to-emerald-700 mt-4">
+            <h1 class="inline-block p-4 text-4xl sm:text-5xl pt-2 font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 via-emerald-500 to-emerald-700 mt-11 sm:mt-5">
                 Projects
             </h1>
-            <p class="mt-2 mb-4 text-xl sm:text-2xl font-semibold text-gray-900">
+            <p class="mt-2 text-xl sm:text-2xl font-semibold text-gray-900">
                 Explore my portfolio of projects, showcasing my expertise in 
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-purple-800 to-blue-800 font-extrabold">
                     full-stack development,
                 </span>    
-                problem-solving and creating user-focused web applications.
             </p>
-            <div>
+            <p class="mb-4 text-xl sm:text-2xl font-semibold text-gray-900">
+              problem-solving and creating user-focused web applications.
+            </p>
+            <div class="flex flex-col items-center gap-4">
               {
-                projects.map((project)=>{
-                  return <ProjectCard {...project} />
-                })
+                projects.map((project)=>(
+                  <ProjectCard {...project} />
+                ))
               }
             </div>
         </div>
