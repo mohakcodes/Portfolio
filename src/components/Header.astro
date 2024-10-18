@@ -10,16 +10,16 @@ const currentPath = Astro.url.pathname;
     <div class="sm:mt-[2px]">
         <ul class="flex gap-3 sm:gap-4 items-center font-semibold sm:text-xl text-lg">
             <li class={currentPath === '/' ? 'font-bold underline' : 'hover:underline'}>
-                <a href="/">Home</a>
+                <a href="/Portfolio/">Home</a>
             </li>
             <li class={currentPath === '/about' ? 'font-bold underline' : 'hover:underline'}>
-                <a href="/about">About</a>
+                <a href="/Portfolio/about">About</a>
             </li>
             <li class={currentPath === '/projects' ? 'font-bold underline' : 'hover:underline'}>
-                <a href="/projects">Projects</a>
+                <a href="/Portfolio/projects">Projects</a>
             </li>
             <li class={currentPath === '/connect' ? 'font-bold underline' : 'hover:underline'}>
-                <a href="/connect">Connect</a>
+                <a href="/Portfolio/connect">Connect</a>
             </li>
         </ul>
     </div>
